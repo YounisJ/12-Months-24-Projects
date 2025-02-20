@@ -23,7 +23,7 @@ Tools: Python, Requests, BeautifulSoup.
 Generate payloads for bypassing WAFs.
 Tools: Python, Burp Suite, OWASP ZAP.
 
-** 📅 Month 3: Network Security & Traffic Analysis **
+**📅 Month 3: Network Security & Traffic Analysis**
 
 ✅ Project 5 (Day 1-15): Network Packet Sniffer
 
@@ -34,7 +34,7 @@ Tools: Python, Scapy, Wireshark.
 Simulate a DNS spoofing attack and create a detection tool.
 Tools: Python, Scapy, Ettercap.
 
-** 📅 Month 4: Malware Analysis & Reverse Engineering **
+**📅 Month 4: Malware Analysis & Reverse Engineering**
 
 ✅ Project 7 (Day 1-15): Ransomware Simulation & Defense
 Build a Python ransomware simulation and a decryption tool.
@@ -45,7 +45,7 @@ Tools: Python, PyCrypto.
 Analyze a real malware sample and detect malicious indicators.
 Tools: IDA Pro, Ghidra, YARA.
 
-** 📅 Month 5: AI-Powered Cybersecurity **
+**📅 Month 5: AI-Powered Cybersecurity**
 
 ✅ Project 9 (Day 1-15): AI-Based Phishing Detection
 
@@ -56,7 +56,7 @@ Tools: Python, Scikit-learn, NLP.
 Develop an AI model that detects malware vs. benign files.
 Tools: TensorFlow, PEframe, VirusTotal API.
 
-** 📅 Month 6: Threat Intelligence & OSINT **
+**📅 Month 6: Threat Intelligence & OSINT**
 
 ✅ Project 11 (Day 1-15): Dark Web Monitoring System
 
