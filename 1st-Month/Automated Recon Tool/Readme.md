@@ -1,4 +1,5 @@
 **📌 Key Features of a Basic Auto-Recon Tool**
+
 🔹 Subdomain Enumeration – Finds subdomains related to the target domain.
 
 🔹 Port Scanning – Identifies open ports and services running on a target system.
