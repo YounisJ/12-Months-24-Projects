@@ -1,4 +1,4 @@
-**📌 Key Features of a Basic Auto-Recon Tool**
+**📌 Key Features of Auto-Recon Tool**
 
 🔹 Subdomain Enumeration – Finds subdomains related to the target domain.
 
