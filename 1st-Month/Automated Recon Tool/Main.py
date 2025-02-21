@@ -28,3 +28,4 @@ print(f"Done! Subdomains saved in: \n {output_file}")
 # Checking for open ports
 
 cmdNmap = subprocess.run(["nmap", url], capture_output=True, text=True)
+
