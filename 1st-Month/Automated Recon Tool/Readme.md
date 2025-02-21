@@ -23,6 +23,6 @@ Automated Recon Tool for security researchers and pentesters. It automates subdo
 ## 🛠 Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/your-username/repo-name.git
-cd repo-name
+git clone https://github.com/YounisJ/12-Months-24-Projects/1st-Month/Automated%20Recon%Tool.git
+cd 'Automated Recon Tool'
 pip install -r requirements.txt
