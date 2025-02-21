@@ -10,3 +10,20 @@
 - Screenshot Capture – Takes screenshots of web applications.
 - OSINT (Open-Source Intelligence) – Gathers social media and public data.
 - Directory Bruteforcing – Finds hidden directories and files (e.g., /admin, /backup).
+
+
+ Basic README Structure Example
+
+# 🔍 Automated Recon Tool
+![GitHub stars](https://img.shields.io/github/stars/your-username/repo-name?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/your-username/repo-name?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/your-username/repo-name)
+
+Automated Recon Tool for security researchers and pentesters. It automates subdomain enumeration and port scanning.
+
+## 🛠 Installation
+Clone the repository and install dependencies:
+```bash
+git clone https://github.com/your-username/repo-name.git
+cd repo-name
+pip install -r requirements.txt
