@@ -11,13 +11,12 @@
 - OSINT (Open-Source Intelligence) – Gathers social media and public data.
 - Directory Bruteforcing – Finds hidden directories and files (e.g., /admin, /backup).
 
-
  Basic README Structure Example
 
 # 🔍 Automated Recon Tool
-![GitHub stars](https://img.shields.io/github/stars/your-username/repo-name?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/your-username/repo-name?style=flat-square)
-![GitHub license](https://img.shields.io/github/license/your-username/repo-name)
+![GitHub stars](https://img.shields.io/github/stars/YounisJ/12-Months-24-Projects?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/YounisJ/12-Months-24-Projects?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/YounisJ/12-Months-24-Projects)
 
 Automated Recon Tool for security researchers and pentesters. It automates subdomain enumeration and port scanning.
 
