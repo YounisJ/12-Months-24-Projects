@@ -11,7 +11,7 @@ Clone the repository and install dependencies:
 git clone 'https://github.com/YounisJ/12-Months-24-Projects/1st-Month/Automated Recon Tool.git'
 cd 'Automated Recon Tool'
 ```
-⚡ Usage
+## ⚡ Usage
 
 Run the tool using:
 
