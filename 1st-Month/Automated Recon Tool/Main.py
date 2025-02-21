@@ -2,29 +2,57 @@ import subprocess
 import pyfiglet
 import os
 import re
+from tqdm import tqdm
+from termcolor import colored
 
+# Display banner
 banner = pyfiglet.figlet_format("Auto Recon !!!")
-print(banner)
+print(colored(banner, "cyan"))
 
-# Collecting Subdomains Using sublister
+# Get user input
+url = input(colored("\nEnter Website URL Please: ", "yellow")).strip()
 
-url = input("\nEnter Website URL Please: ").strip()
-
+# Create output directory
 output_dir = f"Auto_Recon_For_{url}"
 os.makedirs(output_dir, exist_ok=True)
 
-print("Wait ... Running Sublist3r")
+# Function to run a command and return output
+def run_command(command):
+    try:
+        result = subprocess.run(command, capture_output=True, text=True, check=True)
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as e:
+        print(colored(f"[!] Error running {command[0]}: {e}", "red"))
+        return None
 
-cmdSublister = subprocess.run(["sublist3r", "-d", url], capture_output=True, text=True)
-clean_output = re.sub(r"\x1B\[[0-9;]*[mK]", "", cmdSublister.stdout)
-subdomains = re.findall(rf"[a-zA-Z0-9.-]+\.{url}", clean_output)
-output_file = os.path.join(output_dir, f'SubDomainsfor_{url}.txt')
+# Step 1: Collecting Subdomains Using Subfinder
+print(colored("\n[+] Running Subfinder to collect subdomains...", "blue"))
 
-with open(output_file, 'w') as f:
-    f.write("\n".join(subdomains))
+subfinder_output = run_command(["subfinder", "-d", url])
+if subfinder_output:
+    subdomains = subfinder_output.split("\n")
+    subdomains = [s.strip() for s in subdomains if s.strip()]
+    output_file = os.path.join(output_dir, "SubDomains.txt")
 
-print(f"Done! Subdomains saved in: \n {output_file}")
+    with open(output_file, "w") as f:
+        f.write("\n".join(subdomains))
 
-# Checking for open ports
+    print(colored(f"[✓] Subdomains saved in: {output_file}", "green"))
+else:
+    print(colored("[!] No subdomains found or Subfinder failed.", "red"))
 
-# cmdNmap = subprocess.run(["nmap", url], capture_output=True, text=True)
+# Step 2: Scanning Open Ports with Nmap
+print(colored("\n[+] Running Nmap to check open ports...", "blue"))
+
+nmap_output = run_command(["nmap", "-sV", url])
+if nmap_output:
+    output_file = os.path.join(output_dir, "NmapResult.txt")
+
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(nmap_output + "\n")
+
+    print(colored(f"[✓] Nmap result saved in: {output_file}", "green"))
+else:
+    print(colored("[!] Nmap scan failed.", "red"))
+
+print(colored("\n[✓] Recon completed successfully!", "green"))
