@@ -9,6 +9,9 @@ from termcolor import colored
 banner = pyfiglet.figlet_format("Auto Recon !!!")
 print(colored(banner, "cyan"))
 
+print(colored("\n\nThis tool is built for pentesters and bug hunters You \njust have to provide the URL of the website you want to\nperform reconnesance on", "blue"))
+
+
 # Get user input
 url = input(colored("\nEnter Website URL Please: ", "yellow")).strip()
 
